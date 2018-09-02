@@ -1,0 +1,171 @@
+* { box-sizing:border-box;}
+
+html {
+
+    font-family: 'Noto Sans Kannada', sans-serif;
+    
+}
+
+body {
+    margin : 0px ;
+    min-width: 200px;
+    
+}
+
+.header {
+    /* background-image: url(https://i.imgur.com/JIiIiqA.jpg); */
+    background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
+    background-size: cover;
+    float: center;
+    width: 100%;
+    padding: 80px  ;
+    
+    text-align: center;
+  
+}
+
+.header:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.h1 {
+   
+    transform: translateY(60px);
+    color : white;
+}
+
+.h4 {
+    transform: translateY(75px);
+    color:white;
+}
+
+
+#form input {
+    transform: translateY(50px);
+    margin-top: 120px;
+    border:none;
+    width: 75%;
+    padding:10px;
+    float: left;
+    font-size: 16px;
+    height: 42px;
+}
+
+.addBtn {
+  
+    position: relative;
+    transform: translateY(50px);
+    transform: translateX(865px);
+    
+    
+    padding: 10px;
+  
+    margin-top:132px;
+
+    background: #99BBFF;
+    border:#99BBFF;
+    color:	white;
+    float: left;
+    text-align:center;
+    line-height: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition:0.3s
+}
+
+.addBtn:hover {
+    background:#5599FF;
+    color:white;
+    position: relative;
+    top:1px;
+}
+#post-item-thing {
+    border:3px solid #99BBFF ;
+
+    position: relative; 
+    margin-top: 130px;
+    width: 200px;
+    margin-right: 0px;
+    border-right: white;
+    text-align: center;
+}
+#post-item-memo {
+    border:3px solid #99BBFF;
+
+    position: relative;
+    margin-top:130px;
+    transform: translateX(-100px);
+    margin-left: 90px;
+    border-left: #eee;
+    width: 300px;
+    text-align: center;
+}
+
+
+
+#time {
+    text-align: center;
+    margin: 10px;
+    font-size: 22px;
+    transform: translateX(30px);
+}
+
+
+ul {
+    background-color: white;
+    width: 700px;
+    margin:0px auto;
+    padding:10px;
+    
+}
+    
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 8px 12px 90px ;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    user-select:none;
+    list-style-type:none; 
+}
+    
+
+
+ul li:hover {
+    background-color: bisque;
+}
+
+ul li.checked {
+    background:#99FF99;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content:'';
+    position: absolute;
+    border-color: black;
+    border-style:solid;
+    border-width: 0 2px 2px 0 ;
+    top:10px;
+    left:30px;
+    transform: rotate(45deg);
+    height:15px;
+    width:7px;
+    
+
+}
+
+.close {
+    position:absolute;
+    right: 0 ;
+    top: 0 ;
+    padding: 12px 16px 12px 16px
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}

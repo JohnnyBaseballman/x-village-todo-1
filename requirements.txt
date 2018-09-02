@@ -1,0 +1,4 @@
+flask == 1.0.2
+python == 3.6.6
+gunicorn == 19.9.0
+

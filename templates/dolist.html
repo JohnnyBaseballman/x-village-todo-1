@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ｗei_Todolist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href={{ url_for( 'static', filename='dolist.css' ) }} />
+
+    <style>
+        section {
+            margin: 50px 0;
+        }
+
+        .list-group-item,
+        .list-group-item:hover,
+        .list-group-item i,
+        .list-group-item i:hover,
+        .list-group-item:hover i {
+            transition: 0.3s;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .list-group-item {
+            cursor: pointer;
+            padding: 10px 8px 12px 90px;
+            background: #eee;
+            /* display mouse hand icon when hover the element */
+        }
+
+        .list-group-item:hover {
+            color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 5px 0 #2196F3;
+        }
+
+        .list-group-item i {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* When Hover list-group-item, show trash icon */
+        .list-group-item:hover i {
+            opacity: 0.6;
+            pointer-events: auto;
+        }
+
+        .list-group-item i:hover {
+            opacity: 1;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="myDIV" class="header">
+        <h1 class="h1" style="margin:5px">待 辦 清 單</h1>
+        <h4 class="h4">什麼待拌的都把它拌一拌。</h4>
+        <form id="post-form">
+            <input type="text" id="post-item-thing" placeholder="事情">
+            <input type="text" id="post-item-memo" placeholder="備註">
+            <button type="submit" id="addButton" class="addBtn" style=width:100px;height:28px;>新 增</button>
+        </form>
+    </div>
+
+    <div id="time">
+        <script language="JavaScript">
+            var Today = new Date();
+            var MonthIn = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            //document.write("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
+            document.write(MonthIn[Today.getMonth()] + ',' + Today.getDate() + 'th' + "'s thing to do ");
+        </script>
+    </div>
+
+
+    <ul id="item-lists">
+        <li>吃蘋果</li>
+        <li class="checked">喝果汁</li>
+        <li>看影集</li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src={{ url_for( 'static', filename='try.js' ) }}></script>
+
+
+
+    <script> // 發送一個請求後更新頁面內容
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
